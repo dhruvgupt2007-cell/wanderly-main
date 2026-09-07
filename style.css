@@ -1,0 +1,661 @@
+/*    ****GLOBAL****      */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #2f3e3b;
+    background-color: #f7f6f2;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*    HEADER  */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 7%;
+    background-color: white;
+}
+
+header > div:first-child {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 14px;
+}
+
+header > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header button {
+    border: none;
+    padding: 10px 20px;
+    background-color: #d6ad3a;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(20, 45, 40, 0.55),
+            rgba(20, 45, 40, 0.55)
+        ),
+        url("image/amalfi.jpg.jpg.jpeg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin: 15px 0;
+    font-family: Georgia, serif;
+}
+
+.hero > p {
+    margin-bottom: 20px;
+}
+
+
+/* HERO FORM */
+
+.hero form {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+
+    background-color: white;
+    color: #333;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
+    margin-top: 20px;
+}
+
+.hero form div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.hero label {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.hero input,
+.hero select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    min-width: 150px;
+}
+
+.hero form button {
+    padding: 11px 25px;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: #d6ad3a;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    text-align: center;
+
+    background-color: white;
+    padding: 40px 8%;
+}
+
+.stats h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.stats p {
+    color: #777;
+}
+
+
+/* =========================
+   POPULAR DESTINATIONS
+========================= */
+
+.popular-destinations {
+    padding: 80px 8%;
+}
+
+.popular-destinations > div:first-child {
+    margin-bottom: 30px;
+}
+
+.popular-destinations h2 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+}
+
+.popular-destinations > div:first-child p {
+    color: #777;
+    margin: 8px 0;
+}
+
+.popular-destinations > div:first-child a {
+    color: #b68a1e;
+}
+
+
+/* DESTINATION CARDS */
+
+.popular-destinations > div:not(:first-child) {
+    width: calc(33.333% - 15px);
+
+    display: inline-block;
+    vertical-align: top;
+
+    margin-right: 15px;
+    margin-bottom: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    padding-bottom: 20px;
+}
+
+.popular-destinations > div:not(:first-child):nth-child(3n) {
+    margin-right: 0;
+}
+
+
+/* CARD IMAGE */
+
+.popular-destinations img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+/* CARD CONTENT */
+
+.popular-destinations h3,
+.popular-destinations > div:not(:first-child) p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.popular-destinations h3 {
+    margin-top: 18px;
+
+    font-family: Georgia, serif;
+    font-size: 25px;
+}
+
+.popular-destinations > div:not(:first-child) p {
+    margin-top: 8px;
+    color: #666;
+}
+
+.popular-destinations > div:not(:first-child) p:last-child {
+    font-weight: bold;
+}
+
+
+/* =========================
+   WHY WANDERLY
+========================= */
+
+.why {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.wanderly2 h2 {
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 32px;
+
+    margin-bottom: 40px;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.feature {
+    max-width: 250px;
+}
+
+.feature h3 {
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #777;
+}
+
+
+/* =========================
+   COLLECTIONS
+========================= */
+
+.collections {
+    display: flex;
+    gap: 25px;
+
+    padding: 70px 8%;
+}
+
+.collection-card {
+    position: relative;
+
+    flex: 1;
+
+    height: 320px;
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.collection-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* DARK OVERLAY */
+
+.collection-card::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: rgba(10, 30, 25, 0.35);
+}
+
+
+/* COLLECTION TEXT */
+
+.collection-content {
+    position: absolute;
+
+    bottom: 30px;
+    left: 30px;
+
+    color: white;
+
+    z-index: 2;
+}
+
+.collection-content h2 {
+    font-family: Georgia, serif;
+
+    max-width: 400px;
+
+    margin-bottom: 15px;
+}
+
+.collection-content button {
+    padding: 10px 18px;
+
+    border: 1px solid white;
+    border-radius: 20px;
+
+    background: transparent;
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonial-card {
+    display: inline-block;
+    vertical-align: top;
+
+    width: calc(33.333% - 35px);
+
+    min-height: 230px;
+
+    margin: 20px 15px 80px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.testimonial-card > p:first-child {
+    color: #d6ad3a;
+    margin-bottom: 15px;
+}
+
+.testimonial-card > p:nth-child(2) {
+    color: #666;
+    font-style: italic;
+}
+
+.testimonial-card div {
+    margin-top: 25px;
+}
+
+.testimonial-card h4 {
+    margin-bottom: 3px;
+}
+
+.testimonial-card div p {
+    color: #888;
+    font-size: 12px;
+}
+
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter {
+    text-align: center;
+
+    background-color: #173d35;
+
+    color: white;
+
+    padding: 80px 20px;
+}
+
+.newsletter h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.newsletter > p {
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    color: #d0d8d5;
+}
+
+.newsletter form {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.newsletter input {
+    width: 300px;
+
+    padding: 13px;
+
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 13px 25px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #d6ad3a;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #f1f0ec;
+
+    padding: 60px 8% 20px;
+}
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns: 2fr repeat(4, 1fr);
+
+    gap: 40px;
+}
+
+.footer-brand h3 {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.footer-brand > p {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.app-buttons button {
+    background-color: #173d35;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    color: #666;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+
+    margin-top: 40px;
+    padding-top: 20px;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero form {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .popular-destinations > div:not(:first-child) {
+        width: calc(50% - 15px);
+    }
+
+    .collections {
+        flex-direction: column;
+    }
+
+    .testimonial-card {
+        width: calc(50% - 35px);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .popular-destinations > div:not(:first-child) {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial-card {
+        display: block;
+        width: auto;
+
+        margin: 20px 8%;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+}
